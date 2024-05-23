@@ -2,65 +2,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvie Assigment Calculator</title>
+    <title>Alvie Assigment Calculator Segitiga</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1><center>Welcome to My Calculator</center></h1>
-        <section>
-            <p>
-                <center>Hi sobat, welcome to my calculator!</center>
-                <center>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangunan datar</center>
-            </p>
-        </section>
-    </header>
-
-    <section>
-        <!-- Ini title general  -->
-            <div class="section-content">
-                <h3> Segitiga </h3>
-            </div>
-
-            <button type="button" id="switch-keliling"><u>Switch ke Keliling Segitiga</u></button>
-        
-            <section>
-                <!-- Content atas -->
-                <section>
-                    <div class="section-content">
-                        <h2> Luas Segitiga </h2>
-                    </div>
-        
-                    <div class="formula-img">
-                        <img 
-                        src="https://cdn-brilio-net.akamaized.net/real/2023/10/16/2130004/rumus-luas-segitiga-sama-sisi.png">
-                    </div>
-                <p>Lorem ipsum</p>
-            </section> 
-
-            <!-- Pemisah -->
-            <hr />
-            
-            <!-- Content Bawah -->
-            <section>
+    <div class="container section-content">
+        <h3>Kalkulator Matematika Segitiga</h3>
+        <p>- Selamat datang di website kalkulator matematika untuk menghitung luas dan keliling segitiga -</p>
+        <button type="button" id="switch-keliling" onclick="hideOrShow()"><u>Switch ke Keliling Segitiga</u></button>
+        <div class="gambar">
+            <img src="assets/segitiga.png" alt="Segitiga" />
+        </div>
+            <!-- Form Menghitung Luas Segitiga -->
+            <section id="luas-section">
                 <header>
-                    <h2> Hitung Luas Segitiga </h2>
+                    <h3> Hitung Luas Segitiga </h3>
                 </header>
-                <form>
+                <p style="text-align: left;">Keterangan : <br>
+                a = alas Segitiga<br>
+                t = tinggi Segitiga<br>
+                L = 1/2 x alas x tinggi</p>
+                <form id="myForm">
                     <section>
                         <div>
-                            <label>Alas :</label><input />
+                            <label for="alas">Alas :</label><br>
+                            <input type="number" id="alas" placeholder="Masukkan Alas" required>
                         </div>
                         <div>
-                            <label>Tinggi :</label><input />
+                            <label for="tinggi">Tinggi :</label><br>
+                            <input type="number" id="tinggi" placeholder="Masukkan Tinggi" required>
                         </div>
-                    </section>
-                    <p>diketahui : Lorem, ipsum</p>
-                    <button type="button" id="reset-btn">Hitung</button>
-                    <button type="button" id="reset-btn">Reset</button>
+                    </section><br>
+                    <button type="button" id="hitungLuasSegitiga">Hitung</button>
+                    <button type="button" onclick="reset()">Reset</button><br><br>
+                    <label id="outputLuas"></label>              
                 </form>
             </section>
+
+            <!-- Form Menghitung Keliling Segitiga -->
+            <section id="keliling-section" style="display: none;">
+                <header>
+                    <h3> Hitung Keliling Segitiga </h3>
+                </header>
+                <p style="text-align: left;">Keterangan : <br>
+                A = sisi A Segitiga<br>
+                B = sisi B Segitiga<br>
+                C = sisi C Segitiga<br>
+                K = A + B + C</p>
+                <form id="myForm">
+                    <section>
+                        <div id="area-keliling">
+                            <label for="sisiA">Sisi A :</label><br>
+                            <input type="number" id="sisiA" placeholder="Masukkan Sisi A" required>
+                        </div>
+                        <div>
+                            <label for="sisiA">Sisi B :</label><br>
+                            <input type="number" id="sisiB" placeholder="Masukkan Sisi B" required>
+                        </div>
+                        <div>
+                            <label for="sisiA">Sisi C :</label><br>
+                            <input type="number" id="sisiC" placeholder="Masukkan Sisi C" required>
+                        </div>
+                    </section><br>
+                    <button type="button" id="hitungKelilingSegitiga">Hitung</button>
+                    <button type="button" onclick="reset()">Reset</button><br><br>
+                    <label id="outputKeliling"></label>                 
+                </form>
             </section>
-        </section>
+    </div>
+    <script src="./js/script.js"></script> 
 </body>
 </html>

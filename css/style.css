@@ -1,28 +1,42 @@
-/*ini CSS */
-.section-content {
-background-color:coral;
-color: white;
-padding-top: 8px;
-padding-bottom: 8px;
-text-align: center;
+/* ini CSS */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    background-color:beige;
+    margin: 0;
+    padding: 2rem;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .section-content>h3 {
-    margin: 0px;
-}
+    background-color:coral;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    }
 
 #switch-keliling {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     background-color: white;
     border: 0px;
-    color: blue;
+    color: black;
 }
 
 .formula-img {
     text-align: center;
-
 }
 
 input {
@@ -37,16 +51,12 @@ input {
 form>button {
     padding: 18px;
     background-color: beige;
-    border: 1px solid darksalmon;
+    border: 1px solid coral;
     border-radius: 18px;
 }
 
-#reset-btn {
-    background-color: coral;
+form>button:hover {
+    background-color:coral;
     color: white;
 }
 
-#reset-btn:hover {
-    background-color:darksalmon;
-    color: white;
-}
